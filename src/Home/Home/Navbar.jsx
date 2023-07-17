@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Hosting-job-task/logo-d.png'
 const Navbar = () => {
     return (
@@ -19,22 +20,17 @@ const Navbar = () => {
               <li><a>Item 3</a></li>
             </ul>
           </div>
-         <img className="btn btn-ghost normal-case text-xl" src={logo} alt="" />
+         <img className="btn btn-ghost normal-case p-2" src={logo} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
+          <div className="menu menu-horizontal px-1 gap-5 font-semibold font-sans">
+            <Link to='/'>Home</Link>
+            <li>VPS hosting server</li>
+            <li>Shared hosting server</li>
+            <li>Dedicated hosting service</li>
+            <li>Domain</li>
+        
+          </div>
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>
